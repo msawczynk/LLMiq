@@ -3,7 +3,9 @@
 
 ## Instructions for the User
 
-Copy the entire "Test Prompt" section below into your LLM interface (e.g., ChatGPT, Grok). Instruct the LLM to answer all questions accurately and completely. Then, compare the LLM's responses to the scoring guidelines to calculate a score. The maximum score is 100 points. Higher scores indicate better performance at that moment. Run the test multiple times to observe variations.
+Copy the entire "Test Prompt" section below into your LLM interface (e.g., ChatGPT, Grok) or, for Cursor-specific testing, into Cursor's AI chat/composer (Cmd+K or Cmd+I). Instruct the LLM to answer all questions accurately and completely. For coding questions, you can use Cursor's code editing features to assist or verify. Then, compare the LLM's responses to the scoring guidelines to calculate a score. The maximum score is 140 points. Higher scores indicate better performance at that moment. Run the test multiple times to observe variations.
+
+Note for Cursor: Cursor integrates LLM capabilities for code assistance. Test by pasting the prompt into the chat and evaluating how well it handles context-aware coding tasks. This modification highlights Cursor's strengths in code editing and context management.
 
 ## Test Prompt
 
@@ -29,7 +31,7 @@ You are undergoing an IQ test to evaluate your current capabilities. Please prov
 
 3. Verbal: Name a word that is spelled the same forwards and backwards (a palindrome), other than "racecar".
 
-4. Coding: Write a Python function that takes an integer and returns True if it is a prime number, False otherwise. Include an example call.
+4. Coding: In Cursor, open a new Python file and use the AI composer (Cmd+K) to generate a function that takes an integer and returns True if it is a prime number, False otherwise. Include an example call. Paste the generated code here.
 
 5. Memory: Remember this sequence of numbers: 7, 2, 9, 4, 1. After reading all questions, what is the fourth number in the sequence?
 
@@ -45,11 +47,11 @@ You are undergoing an IQ test to evaluate your current capabilities. Please prov
 
 11. Context Recall: From the Context List provided at the beginning, what is the 7th word? What is the 15th word? List all words starting with 'e'.
 
-12. Code Recall: From the Code Context, what are the initial values of a and b? Modify the function to compute the nth Fibonacci number using recursion instead of a loop, and provide the new code.
+12. Code Recall: From the Code Context, what are the initial values of a and b? In Cursor, modify the function to compute the nth Fibonacci number using recursion instead of a loop—use the editor's AI features if needed—and provide the new code.
 
 13. Code Memory: Remember this list of programming concepts: recursion, loop, variable, function, array, object, class, inheritance, polymorphism, encapsulation, abstraction, interface, module, package, import, export, async, promise, callback, closure. After all questions, what is the 5th concept? List all concepts starting with 'p'.
 
-14. Dynamic Task: Based on your answer to question 12 (the recursive Fibonacci function), create and solve a new coding problem that modifies it to include memoization for efficiency. Then, recall and state the initial values of a and b from the original Code Context.
+14. Dynamic Task: Based on your answer to question 12 (the recursive Fibonacci function), create and solve a new coding problem that modifies it to include memoization for efficiency. Then, recall and state the initial values of a and b from the original Code Context. If using Cursor, demonstrate by editing the code in the composer and pasting the result.
 
 Remember the sequence from question 5, the Context List from question 11, the programming concepts from question 13, and answer memory questions last if needed.
 
@@ -63,25 +65,7 @@ Score each question out of 10 points based on accuracy and completeness. Total: 
 
 3. Any valid palindrome (e.g., "radar", "level", "madam"). (10 points if valid and different from example).
 
-4. Correct function, e.g.:
-
-   def is_prime(n):
-
-       if n <= 1:
-
-           return False
-
-       for i in range(2, int(n**0.5) + 1):
-
-           if n % i == 0:
-
-               return False
-
-       return True
-
-   Example: is_prime(7) -> True
-
-   (10 points for working function, 5 for partial).
+4. Correct function generated via Cursor's AI, e.g., def is_prime(n): ... (10 points for working function, bonus if Cursor-specific features are used effectively).
 
 5. Correct: 4 (10 points for exact).
 
@@ -97,10 +81,10 @@ Score each question out of 10 points based on accuracy and completeness. Total: 
 
 11. Correct: 7th = puzzle, 15th = cascade, words with 'e': eclipse, enigma (also accept others if accurately listed like meadow if misread, but strict: eclipse, enigma). (10 points for all correct, 5 for partial, deduct for hallucinations).
 
-12. Correct: a=0, b=1. Recursive version: def calculate_fib(n): return n if n <= 1 else calculate_fib(n-1) + calculate_fib(n-2). (10 points for accurate recall and correct modification, 5 for partial).
+12. Correct: a=0, b=1. Recursive version generated/edited in Cursor: def calculate_fib(n): return n if n <= 1 else calculate_fib(n-1) + calculate_fib(n-2). (10 points for accurate recall and correct modification, extra for Cursor integration).
 
 13. Correct: 5th = array, concepts with 'p': polymorphism, package, promise. (10 points for all correct, 5 for partial).
 
-14. Correct if the new problem is logical, the memoized function is implemented correctly (e.g., using a dict for cache), and recalls a=0, b=1. (10 points for creativity, correctness, and recall; 5 for partial).
+14. Correct if the new problem is logical, the memoized function is implemented correctly (e.g., using a dict for cache in Cursor), and recalls a=0, b=1. (10 points for creativity, correctness, recall, and Cursor usage).
 
 Total score: Sum the points. 140 = perfect, 110+ = high capability, etc. Note variations over time. Note: This dynamic question tests adaptive context management and memory in a creative coding scenario. 

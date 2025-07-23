@@ -13,11 +13,13 @@ The test consists of a set of questions covering arithmetic, logic, memory, codi
 
 2. To run the test:
    - Open `tests/iq_test.md`.
-   - Copy the prompt section into your LLM (e.g., ChatGPT, Grok, etc.).
-   - Let the LLM respond to all questions.
+   - Copy the prompt section into your LLM (e.g., ChatGPT, Grok) or Cursor's AI chat/composer.
+   - Let the LLM respond to all questions, using Cursor's features for coding tasks if applicable.
    - Manually score the responses using the scoring guidelines in the file.
 
 3. The total score gives a rough measure of the LLM's "IQ" at that moment. Repeat the test at different times to observe variations.
+
+**Cursor-Specific Notes**: The test has been adapted for Cursor. Use Cmd+K for code composition or Cmd+I for chat. This evaluates how well Cursor's AI handles context in coding scenarios. Open the project in Cursor for the best experience.
 
 ## Project Structure
 
@@ -27,19 +29,7 @@ The test consists of a set of questions covering arithmetic, logic, memory, codi
 - `research/`: Documentation of research on topics like dynamic task creation.
 - `LICENSE`: MIT License.
 
-## Pushing to GitHub
 
-Since GitHub CLI is not installed, manually create the repository on GitHub and push:
-
-1. Go to https://github.com/new and create a new repository named "LLMiq" (or your preferred name, public or private).
-
-2. Run the following commands in your terminal (adjust the URL to your repository):
-
-   git remote add origin https://github.com/yourusername/LLMiq.git
-
-   git branch -M main
-
-   git push -u origin main
 
 ## Contributing
 
