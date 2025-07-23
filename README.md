@@ -25,6 +25,7 @@ The test consists of a set of questions covering arithmetic, logic, memory, codi
 
 - `README.md`: This file.
 - `tests/iq_test.md`: The main test prompt with dynamic elements and scoring guidelines.
+- `tests/adaptive_prompt.md`: Standalone prompt for direct adaptive testing in LLM interfaces like Cursor.
 - `scripts/`: Automation scripts, including `adaptive_test.py` using LangChain for dynamic tasks.
 - `research/`: Documentation of research on topics like dynamic task creation.
 - `LICENSE`: MIT License.
