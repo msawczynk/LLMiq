@@ -26,11 +26,14 @@ The test consists of a set of questions covering arithmetic, logic, memory, codi
 - `README.md`: This file.
 - `tests/iq_test.md`: The main test prompt with dynamic elements and scoring guidelines.
 - `tests/adaptive_prompt.md`: Standalone prompt for direct adaptive testing in LLM interfaces like Cursor.
+- `tests/challenging_adaptive.md`: Advanced unbeatable adaptive prompt to test LLM limits (no 10/10 possible).
 - `scripts/`: Automation scripts, including `adaptive_test.py` using LangChain for dynamic tasks.
 - `research/`: Documentation of research on topics like dynamic task creation.
 - `LICENSE`: MIT License.
 
+Alternatively, for script-free testing directly in an LLM interface (e.g., Cursor's chat), use `tests/adaptive_prompt.md`. Copy the prompt into the interface and let the LLM run the adaptive test on itself, including self-generation and scoring of tasks. This is ideal for quick checks in tools like Cursor or Windsurf.
 
+For an extra challenge, try `tests/challenging_adaptive.md`—a prompt designed so no current LLM can achieve a perfect score, highlighting limitations in handling paradoxes, long contexts, and anti-hallucination.
 
 ## Contributing
 
