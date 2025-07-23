@@ -28,7 +28,9 @@ The test consists of a set of questions covering arithmetic, logic, memory, codi
 - `tests/adaptive_prompt.md`: Direct adaptive testing prompt.
 - `tests/challenging_adaptive.md`: Unbeatable adaptive prompt.
 - `tests/extreme_context_test_v1.md`, `v2.md`, `v3.md`: Iteratively harder prompts for context window approximation.
+- `tests/extreme_context_5m_v1.md`, `v2.md`, `v3.md`: Versions scaled for 5M-token models.
 - `scripts/extreme_context_test_v1.py`, `v2.py`, `v3.py`: Script versions for automated context probing.
+- `scripts/extreme_context_5m_v1.py`, `v2.py`, `v3.py`: 5M-scaled scripts.
 - `scripts/`: Other automation scripts.
 - `research/`: Research docs.
 - `LICENSE`: MIT License.
@@ -38,6 +40,8 @@ Alternatively, for script-free testing directly in an LLM interface (e.g., Curso
 For an extra challenge, try `tests/challenging_adaptive.md`—a prompt designed so no current LLM can achieve a perfect score, highlighting limitations in handling paradoxes, long contexts, and anti-hallucination.
 
 **Extreme Context Tests**: Use `tests/extreme_context_test_v[1-3].md` for direct prompts that scale to estimate context window. Or run `scripts/extreme_context_test_v[1-3].py` (requires LangChain, tiktoken: pip install tiktoken). V3 is the most refined, with multi-turn and contradiction handling.
+
+**5M Token Variants**: For models with ultra-large contexts, use `tests/extreme_context_5m_v[1-3].md` or run `scripts/extreme_context_5m_v[1-3].py`. These simulate massive scales to approximate effective window size.
 
 ## Contributing
 
