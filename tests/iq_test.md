@@ -21,7 +21,7 @@ Remember: The function is named calculate_fib, uses a loop, initializes a=0 b=1,
 
 Before starting the questions, memorize this list of 20 random words (the "Context List"): apple, quantum, umbrella, tiger, eclipse, harmony, puzzle, lantern, vortex, whisper, galaxy, meadow, sapphire, thunder, cascade, enigma, horizon, jubilee, labyrinth, nectar.
 
-You are undergoing an IQ test to evaluate your current capabilities. Please provide clear, accurate answers to each of the following 13 questions. Number your responses accordingly.
+You are undergoing an IQ test to evaluate your current capabilities. Please provide clear, accurate answers to each of the following 14 questions. Number your responses accordingly.
 
 1. Arithmetic: What is 17 multiplied by 24?
 
@@ -49,11 +49,13 @@ You are undergoing an IQ test to evaluate your current capabilities. Please prov
 
 13. Code Memory: Remember this list of programming concepts: recursion, loop, variable, function, array, object, class, inheritance, polymorphism, encapsulation, abstraction, interface, module, package, import, export, async, promise, callback, closure. After all questions, what is the 5th concept? List all concepts starting with 'p'.
 
-Remember the sequence from question 5, the Context List from question 11, and answer memory questions last if needed.
+14. Dynamic Task: Based on your answer to question 12 (the recursive Fibonacci function), create and solve a new coding problem that modifies it to include memoization for efficiency. Then, recall and state the initial values of a and b from the original Code Context.
+
+Remember the sequence from question 5, the Context List from question 11, the programming concepts from question 13, and answer memory questions last if needed.
 
 ## Scoring Guidelines
 
-Score each question out of 10 points based on accuracy and completeness. Total: 130 points.
+Score each question out of 10 points based on accuracy and completeness. Total: 140 points.
 
 1. Correct answer: 408 (10 points for exact match).
 
@@ -99,4 +101,6 @@ Score each question out of 10 points based on accuracy and completeness. Total: 
 
 13. Correct: 5th = array, concepts with 'p': polymorphism, package, promise. (10 points for all correct, 5 for partial).
 
-Total score: Sum the points. 130 = perfect, 100+ = high capability, etc. Note variations over time. Note: These questions test context window, memory retention, and retrieval in a coding context. 
+14. Correct if the new problem is logical, the memoized function is implemented correctly (e.g., using a dict for cache), and recalls a=0, b=1. (10 points for creativity, correctness, and recall; 5 for partial).
+
+Total score: Sum the points. 140 = perfect, 110+ = high capability, etc. Note variations over time. Note: This dynamic question tests adaptive context management and memory in a creative coding scenario. 
