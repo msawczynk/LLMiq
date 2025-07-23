@@ -24,16 +24,20 @@ The test consists of a set of questions covering arithmetic, logic, memory, codi
 ## Project Structure
 
 - `README.md`: This file.
-- `tests/iq_test.md`: The main test prompt with dynamic elements and scoring guidelines.
-- `tests/adaptive_prompt.md`: Standalone prompt for direct adaptive testing in LLM interfaces like Cursor.
-- `tests/challenging_adaptive.md`: Advanced unbeatable adaptive prompt to test LLM limits (no 10/10 possible).
-- `scripts/`: Automation scripts, including `adaptive_test.py` using LangChain for dynamic tasks.
-- `research/`: Documentation of research on topics like dynamic task creation.
+- `tests/iq_test.md`: Main test prompt.
+- `tests/adaptive_prompt.md`: Direct adaptive testing prompt.
+- `tests/challenging_adaptive.md`: Unbeatable adaptive prompt.
+- `tests/extreme_context_test_v1.md`, `v2.md`, `v3.md`: Iteratively harder prompts for context window approximation.
+- `scripts/extreme_context_test_v1.py`, `v2.py`, `v3.py`: Script versions for automated context probing.
+- `scripts/`: Other automation scripts.
+- `research/`: Research docs.
 - `LICENSE`: MIT License.
 
 Alternatively, for script-free testing directly in an LLM interface (e.g., Cursor's chat), use `tests/adaptive_prompt.md`. Copy the prompt into the interface and let the LLM run the adaptive test on itself, including self-generation and scoring of tasks. This is ideal for quick checks in tools like Cursor or Windsurf.
 
 For an extra challenge, try `tests/challenging_adaptive.md`—a prompt designed so no current LLM can achieve a perfect score, highlighting limitations in handling paradoxes, long contexts, and anti-hallucination.
+
+**Extreme Context Tests**: Use `tests/extreme_context_test_v[1-3].md` for direct prompts that scale to estimate context window. Or run `scripts/extreme_context_test_v[1-3].py` (requires LangChain, tiktoken: pip install tiktoken). V3 is the most refined, with multi-turn and contradiction handling.
 
 ## Contributing
 
