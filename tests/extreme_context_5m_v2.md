@@ -16,3 +16,6 @@ V2: Randomized queries in 2M-item simulation.
 
 ## Review
 - Randomized for robustness. 
+
+## Quick Test in Cursor
+Use for randomized large-scale test. 

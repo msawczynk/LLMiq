@@ -20,3 +20,6 @@ Outputs comparison.
 
 ## Review
 - Best approximation. 
+
+## Quick Test in Cursor
+Use Cmd+I for multi-turn simulation. 

@@ -96,3 +96,14 @@ Use this to track runs (copy for each test):
 |----------|---------------|-------------|------------------------|
 | YYYY-MM-DD | e.g., Grok 4 | XX/140 | e.g., Failed Q11 recall |
 |          |               |             |                        | 
+
+## Quick Test in Cursor or Agentic LLMs
+For easy testing in Cursor:
+1. Open Cursor and create a new file (e.g., test.py).
+2. Use Cmd+I to open AI chat, paste the full Test Prompt.
+3. For coding questions (4,12,14), switch to Cmd+K composer to generate/edit code interactively.
+4. Let the agent respond step-by-step, using its context to handle memory tasks.
+
+For other agentic LLMs (e.g., in VS Code): Paste prompt into the agent's chat; use code workspace for interactive editing.
+
+This setup tests the agent's ability to maintain context across chat and code actions. 

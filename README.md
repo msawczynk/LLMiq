@@ -58,3 +58,13 @@ We welcome contributions! To contribute:
 The `research/` directory contains summaries of relevant topics, such as dynamic task creation for better evaluating LLM capabilities. Contributions to expand this are welcome.
 
 Additionally, `research/lazy_llm_testing.md` provides a detailed guide on empirical LLM verification. Apply its methodology (e.g., baselining, scorecards) to run and track results from this project's tests like iq_test.md or the adaptive/context probes over time.
+
+## Testing in Cursor and Agentic LLMs
+All tests are optimized for quick use in Cursor (Cmd+I chat, Cmd+K composer) and other agentic LLMs. Each .md file has a 'Quick Test' section with steps. For scripts, run in Cursor's terminal (Cmd+`).
+
+- **iq_test.md**: Use chat for prompts, composer for coding.
+- **adaptive_prompt.md**: Chat for steps, composer for code.
+- **challenging_adaptive.md**: Test long context in chat.
+- **extreme/extreme_5m/scalable .md files**: Simulate in chat for context probing.
+
+This enables fast agentic testing of memory, reasoning, and context.

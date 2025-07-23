@@ -20,3 +20,6 @@ Failure outputs estimate.
 
 ## Review
 - Enhanced for accuracy. 
+
+## Quick Test in Cursor
+Paste into Cmd+I; leverage randomization in chat. 

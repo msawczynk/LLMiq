@@ -21,3 +21,6 @@ Remember all; failure indicates limit.
 ## Review Guidelines
 - Score <10 due to scaling/paradox.
 - Estimated window: Approximate based on output. 
+
+## Quick Test in Cursor
+Paste Prompt into Cmd+I; use composer's context for large simulations. 

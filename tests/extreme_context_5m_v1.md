@@ -20,3 +20,6 @@ Failure indicates effective limit.
 
 ## Review
 - Scaled for huge contexts. 
+
+## Quick Test in Cursor
+Paste for virtual scaling; test large-window agents. 

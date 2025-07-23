@@ -35,3 +35,10 @@ Use this to benchmark the LLM's adaptive capabilities directly in any interface!
 |----------|-----------------|------------|-------------------|-------|
 | YYYY-MM-DD | e.g., Cursor | XX/10 | XX/10 | e.g., Hallucinated in step 3 |
 |          |                 |            |                   |       | 
+
+## Quick Test in Cursor or Agentic LLMs
+1. In Cursor, use Cmd+I to open chat and paste the Prompt.
+2. For step 3 (coding), use Cmd+K to compose the function in a file.
+3. Review the self-score.
+
+For agents: Use chat interface; simulate steps interactively. 

@@ -16,3 +16,6 @@ V3: Simulates multi-turn in prompt, benchmarks vs 5M.
 
 ## Review
 - Comprehensive for large models. 
+
+## Quick Test in Cursor
+Simulate 5M in chat. 

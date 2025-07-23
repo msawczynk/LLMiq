@@ -33,3 +33,10 @@ Numbered steps with responses, code, and self-score.
 - Lower: Major recall errors or hallucinations.
 
 Use this to probe LLM limits! 
+
+## Quick Test in Cursor or Agentic LLMs
+1. Paste Prompt into Cmd+I chat.
+2. For step 3, use Cmd+K to generate the paradoxical code.
+3. The long list tests agent's context handling.
+
+Adapt for other agents via multi-turn chat. 

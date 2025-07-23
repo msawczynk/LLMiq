@@ -18,6 +18,9 @@ Test your context limit scalably:
 
 This pushes beyond native limits via adaptation.
 
+## Quick Test in Cursor
+Paste Prompt into Cmd+I; observe self-scaling and extension.
+
 ## Review
 - Detected limit approximates real window.
 - Extension tests creative limit-handling. 
