@@ -28,4 +28,10 @@ The LLM should output numbered steps with responses, code, and self-score.
 - Partial: Minor errors in recall or code.
 - 0: Major hallucinations or failures.
 
-Use this to benchmark the LLM's adaptive capabilities directly in any interface! 
+Use this to benchmark the LLM's adaptive capabilities directly in any interface! For baselining multiple runs, record scores in a scorecard as per research/lazy_llm_testing.md.
+
+## Scorecard Template
+| Run Date | Interface/Model | Self-Score | User Review Score | Notes |
+|----------|-----------------|------------|-------------------|-------|
+| YYYY-MM-DD | e.g., Cursor | XX/10 | XX/10 | e.g., Hallucinated in step 3 |
+|          |                 |            |                   |       | 

@@ -3,7 +3,7 @@
 
 ## Instructions for the User
 
-Copy the entire "Test Prompt" section below into your LLM interface (e.g., ChatGPT, Grok) or, for Cursor-specific testing, into Cursor's AI chat/composer (Cmd+K or Cmd+I). Instruct the LLM to answer all questions accurately and completely. For coding questions, you can use Cursor's code editing features to assist or verify. Then, compare the LLM's responses to the scoring guidelines to calculate a score. The maximum score is 140 points. Higher scores indicate better performance at that moment. Run the test multiple times to observe variations.
+Copy the entire "Test Prompt" section below into your LLM interface (e.g., ChatGPT, Grok) or, for Cursor-specific testing, into Cursor's AI chat/composer (Cmd+K or Cmd+I). Instruct the LLM to answer all questions accurately and completely. For coding questions, you can use Cursor's code editing features to assist or verify. Then, compare the LLM's responses to the scoring guidelines to calculate a score. The maximum score is 140 points. Higher scores indicate better performance at that moment. Run the test multiple times to observe variations. For longitudinal tracking, use the baselining methodology from research/lazy_llm_testing.md—record results in a scorecard for each run/model version.
 
 Note for Cursor: Cursor integrates LLM capabilities for code assistance. Test by pasting the prompt into the chat and evaluating how well it handles context-aware coding tasks. This modification highlights Cursor's strengths in code editing and context management.
 
@@ -87,4 +87,12 @@ Score each question out of 10 points based on accuracy and completeness. Total: 
 
 14. Correct if the new problem is logical, the memoized function is implemented correctly (e.g., using a dict for cache in Cursor), and recalls a=0, b=1. (10 points for creativity, correctness, recall, and Cursor usage).
 
-Total score: Sum the points. 140 = perfect, 110+ = high capability, etc. Note variations over time. Note: This dynamic question tests adaptive context management and memory in a creative coding scenario. 
+Total score: Sum the points. 140 = perfect, 110+ = high capability, etc. Note variations over time. Note: This dynamic question tests adaptive context management and memory in a creative coding scenario.
+
+## Scorecard Template
+Use this to track runs (copy for each test):
+
+| Run Date | Model/Version | Total Score | Notes (e.g., failures) |
+|----------|---------------|-------------|------------------------|
+| YYYY-MM-DD | e.g., Grok 4 | XX/140 | e.g., Failed Q11 recall |
+|          |               |             |                        | 

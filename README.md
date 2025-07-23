@@ -52,3 +52,9 @@ For an extra challenge, try `tests/challenging_adaptive.md`—a prompt designed 
 We welcome contributions! To contribute:
 1. Fork the repository.
 2. Create a new branch (`
+
+## Research
+
+The `research/` directory contains summaries of relevant topics, such as dynamic task creation for better evaluating LLM capabilities. Contributions to expand this are welcome.
+
+Additionally, `research/lazy_llm_testing.md` provides a detailed guide on empirical LLM verification. Apply its methodology (e.g., baselining, scorecards) to run and track results from this project's tests like iq_test.md or the adaptive/context probes over time.
