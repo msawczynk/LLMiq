@@ -11,9 +11,21 @@ fi
 export OPENAI_API_KEY
 
 # The test prompt
-PROMPT='Before starting the questions, memorize this list of 20 random words (the "Context List"): apple, quantum, umbrella, tiger, eclipse, harmony, puzzle, lantern, vortex, whisper, galaxy, meadow, sapphire, thunder, cascade, enigma, horizon, jubilee, labyrinth, nectar.
+PROMPT='Additionally, before the questions, study this Python code snippet (the "Code Context"):
 
-You are undergoing an IQ test to evaluate your current capabilities. Please provide clear, accurate answers to each of the following 11 questions. Number your responses accordingly.
+def calculate_fib(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for _ in range(2, n+1):
+        a, b = b, a + b
+    return b
+
+Remember: The function is named calculate_fib, uses a loop, initializes a=0 b=1, and computes Fibonacci.
+
+Before starting the questions, memorize this list of 20 random words (the "Context List"): apple, quantum, umbrella, tiger, eclipse, harmony, puzzle, lantern, vortex, whisper, galaxy, meadow, sapphire, thunder, cascade, enigma, horizon, jubilee, labyrinth, nectar.
+
+You are undergoing an IQ test to evaluate your current capabilities. Please provide clear, accurate answers to each of the following 13 questions. Number your responses accordingly.
 
 1. Arithmetic: What is 17 multiplied by 24?
 
@@ -37,7 +49,11 @@ You are undergoing an IQ test to evaluate your current capabilities. Please prov
 
 11. Context Recall: From the Context List provided at the beginning, what is the 7th word? What is the 15th word? List all words starting with '\''e'\''.
 
-Remember the sequence from question 5 and answer it last if needed.'
+12. Code Recall: From the Code Context, what are the initial values of a and b? Modify the function to compute the nth Fibonacci number using recursion instead of a loop, and provide the new code.
+
+13. Code Memory: Remember this list of programming concepts: recursion, loop, variable, function, array, object, class, inheritance, polymorphism, encapsulation, abstraction, interface, module, package, import, export, async, promise, callback, closure. After all questions, what is the 5th concept? List all concepts starting with '\''p'\''.
+
+Remember the sequence from question 5, the Context List from question 11, and answer memory questions last if needed.'
 
 # JSON payload
 JSON_PAYLOAD={"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "$PROMPT"}]}
@@ -55,5 +71,5 @@ if echo "$LLM_RESPONSES" | grep -q -i "11.*puzzle.*cascade.*eclipse.*enigma"; th
     SCORE=10
 fi
 # Add more checks...
-echo "Context Recall Score (Q11): $SCORE/10"
+echo "Context Recall Score (Q11): $SCORE/10"  # Note: Update for new questions as needed
 echo "For full scoring, refer to iq_test.md" 

@@ -7,7 +7,21 @@ Copy the entire "Test Prompt" section below into your LLM interface (e.g., ChatG
 
 ## Test Prompt
 
-You are undergoing an IQ test to evaluate your current capabilities. Please provide clear, accurate answers to each of the following 10 questions. Number your responses accordingly.
+Additionally, before the questions, study this Python code snippet (the "Code Context"):
+
+def calculate_fib(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for _ in range(2, n+1):
+        a, b = b, a + b
+    return b
+
+Remember: The function is named calculate_fib, uses a loop, initializes a=0 b=1, and computes Fibonacci.
+
+Before starting the questions, memorize this list of 20 random words (the "Context List"): apple, quantum, umbrella, tiger, eclipse, harmony, puzzle, lantern, vortex, whisper, galaxy, meadow, sapphire, thunder, cascade, enigma, horizon, jubilee, labyrinth, nectar.
+
+You are undergoing an IQ test to evaluate your current capabilities. Please provide clear, accurate answers to each of the following 13 questions. Number your responses accordingly.
 
 1. Arithmetic: What is 17 multiplied by 24?
 
@@ -29,11 +43,17 @@ You are undergoing an IQ test to evaluate your current capabilities. Please prov
 
 10. Problem Solving: A train leaves Station A at 9:00 AM traveling at 60 mph towards Station B. Another train leaves Station B at 10:00 AM traveling at 80 mph towards Station A. The stations are 300 miles apart. At what time do they meet? Show your calculations.
 
-Remember the sequence from question 5 and answer it last if needed.
+11. Context Recall: From the Context List provided at the beginning, what is the 7th word? What is the 15th word? List all words starting with 'e'.
+
+12. Code Recall: From the Code Context, what are the initial values of a and b? Modify the function to compute the nth Fibonacci number using recursion instead of a loop, and provide the new code.
+
+13. Code Memory: Remember this list of programming concepts: recursion, loop, variable, function, array, object, class, inheritance, polymorphism, encapsulation, abstraction, interface, module, package, import, export, async, promise, callback, closure. After all questions, what is the 5th concept? List all concepts starting with 'p'.
+
+Remember the sequence from question 5, the Context List from question 11, and answer memory questions last if needed.
 
 ## Scoring Guidelines
 
-Score each question out of 10 points based on accuracy and completeness. Total: 100 points.
+Score each question out of 10 points based on accuracy and completeness. Total: 130 points.
 
 1. Correct answer: 408 (10 points for exact match).
 
@@ -73,4 +93,10 @@ Score each question out of 10 points based on accuracy and completeness. Total: 
 
 10. Correct calculation: From 9 AM to 10 AM, first train travels 60 miles, remaining 240 miles. Closing speed 140 mph, time = 240/140 ≈ 1.714 hours ≈ 1 hour 43 minutes, so meet at 11:43 AM. (10 points for correct time, 5 for correct setup).
 
-Total score: Sum the points. 100 = perfect, 80+ = high capability, etc. Note variations over time. 
+11. Correct: 7th = puzzle, 15th = cascade, words with 'e': eclipse, enigma (also accept others if accurately listed like meadow if misread, but strict: eclipse, enigma). (10 points for all correct, 5 for partial, deduct for hallucinations).
+
+12. Correct: a=0, b=1. Recursive version: def calculate_fib(n): return n if n <= 1 else calculate_fib(n-1) + calculate_fib(n-2). (10 points for accurate recall and correct modification, 5 for partial).
+
+13. Correct: 5th = array, concepts with 'p': polymorphism, package, promise. (10 points for all correct, 5 for partial).
+
+Total score: Sum the points. 130 = perfect, 100+ = high capability, etc. Note variations over time. Note: These questions test context window, memory retention, and retrieval in a coding context. 
